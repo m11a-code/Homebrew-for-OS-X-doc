@@ -11,6 +11,14 @@ My goal for this document is to simply make the lives of others starting with `H
 
 Enjoy everyone, and I look forward to seeing the document evolve.
 
+This is the command I run to get the PDF to look the way it does with `pandoc`:
+
+~~~~~~~~~~
+    pandoc -s -S -o Homebrew\ for\ OS\ X.pdf Homebrew\ for\ OS\ X.md
+~~~~~~~~~~
+
+The main thing to note is that there is not --toc input flag because I hand that myself in the markdown document so that the title page can have a pagebreak before the table of contents gets entered in. Nitpicky, I know, but it works and make it look the way I intended so that's how I'm leaving it. :)
+
 Shameless Self Promotion
 =====================
 

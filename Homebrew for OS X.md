@@ -204,8 +204,12 @@ And here is the output where `Homebrew` updates some of its Formulae. Note that 
     cityhash
     ==> Updated Formulae
     gmp
+    ==> Deleted Formulae
+    gsutil
     [Blogs@ECE2524 ~] $
 ~~~~~~~~~~
+
+"Updated `Homebrew` from ######## to ########.", "New Formulae", "Updated Formulae", and "Deleted Formulae" are the four statements one can potentially see as output after running the `brew update` command successfully.
 
 ### **An `update`'s cool and all, but an `upgrade`, now that's what's up** ###     {#upgrade-command}
 
@@ -220,20 +224,71 @@ Similar to the `update` command, the `upgrade` command gets your system up-to-da
     [Blogs@ECE2524 ~] $
 ~~~~~~~~~~
 
-Yup, that's right. Nothing happens if everything currently installed on your system by `Homebrew` is still the most current and up-to-date version according to `Homebrew`. Next, an example of a package being upgraded:
+Yup, that's right. Nothing happens if everything currently installed on your system by `Homebrew` is still the most current and up-to-date version according to `Homebrew`. Next, an example of some packages being upgraded:
 
 ~~~~~~~~~~
     [Blogs@ECE2524 ~] $ brew upgrade
-    ==> Upgrading 2 outdated packages, with result:
-    python 2.7.4, subversion 1.7.9
-    ==> Upgrading python
-    ==> Downloading http://www.python.org/ftp/python/2.7.4/
-    Python-2.7.4.tar.bz2
-    Already downloaded: /Library/Caches/Homebrew/python-2.7.4.tar.bz2
-    ==> Downloading patches
+    ==> Upgrading 5 outdated packages, with result:
+    node 0.10.7, python 2.7.5, python3 3.3.2, ruby 2.0.0-p195, vim 7.3.969
+    ==> Upgrading node
+    ==> Downloading http://nodejs.org/dist/v0.10.7/node-v0.10.7.tar.gz
     ############################################################## 100.0%
     ==> Patching
     ...
+    /usr/local/Cellar/node/0.10.7: 1055 files, 15M, built in 2.1 minutes
+    ==> Upgrading python
+    ==> Downloading http://www.python.org/ftp/python/2.7.5/
+    Python-2.7.5.tar.bz2
+    ############################################################## 100.0%
+    ...
+    ==> Downloading https://pypi.python.org/packages/source/d/
+    distribute/distribute-0.6.40.tar.gz
+    ############################################################## 100.0%
+    ...
+    ==> Downloading https://pypi.python.org/packages/source/p/pip/
+    pip-1.3.1.tar.gz
+    ############################################################## 100.0%
+    ...
+    ==> Summary
+    /usr/local/Cellar/python/2.7.5: 5200 files, 80M, built in 2.1 minutes
+    ==> Upgrading python3
+    ==> Downloading http://python.org/ftp/python/3.3.2/Python-3.3.2.tar.bz2
+    ############################################################## 100.0%
+    ...
+    ==> Downloading https://pypi.python.org/packages/source/d/
+    distribute/distribute-0.6.40.tar.gz
+    ############################################################## 100.0%
+    ...
+    ==> Downloading https://pypi.python.org/packages/source/p/pip/
+    pip-1.3.1.tar.gz
+    ############################################################## 100.0%
+    ...
+    ==> Summary
+    /usr/local/Cellar/python3/3.3.2: 4700 files, 92M, built in 2.3 minutes
+    ==> Upgrading ruby
+    ==> Downloading http://ftp.ruby-lang.org/pub/ruby/2.0/
+    ruby-2.0.0-p195.tar.bz2
+    ############################################################## 100.0%
+    ...
+    ==> make install
+    ==> Caveats
+    NOTE: By default, gem installed binaries will be placed into:
+      /usr/local/opt/ruby/bin
+
+    You may want to add this to your PATH.
+    ==> Summary
+    /usr/local/Cellar/ruby/2.0.0-p195: 878 files, 19M, built in 3.1
+    minutes
+    ==> Upgrading vim
+    ==> Cloning https://vim.googlecode.com/hg/
+    Updating /Library/Caches/Homebrew/vim--hg
+    ...
+    44 files updated, 0 files merged, 0 files removed, 0 files unresolved
+    ==> Checking out tag v7-3-969
+    ...
+    ==> make install prefix=/usr/local/Cellar/vim/7.3.969 STRIP=/usr/
+    bin/true
+    /usr/local/Cellar/vim/7.3.969: 1536 files, 24M, built in 47 seconds
     [Blogs@ECE2524 ~] $
 ~~~~~~~~~~
 
